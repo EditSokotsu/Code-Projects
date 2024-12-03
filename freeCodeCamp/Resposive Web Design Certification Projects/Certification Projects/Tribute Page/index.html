@@ -1,0 +1,86 @@
+<!-- @AUTH: EditSokotsu
+@PROJ: freeCodeCamp | Technical Document
+@COMM: this is a freeCodeCamp certification project. This project is implemented as a tribute page for Tetris. From my perspective, this project needs a complete overhaul, as it stands right now: it is merely a piece of code that barely passes the user stories. See below for more information. -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tetris: a tribute to</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <main id="main">
+            <nav id="navbar">
+                <ul id="nav-links">
+                    <li class="hideOnMobile"> <a href="#">Home</a> </li>
+                    <li class="hideOnMobile"> <a href="#">History</a> </li>
+                    <li class="hideOnMobile"> <a href="#">More Info</a> </li>
+                    <li id="responsive-menu" onclick="showSideBar(); return false;"> 
+                        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg> 
+                        </a> 
+                    </li>
+                </ul>
+                <ul id="sidebar">
+                    <li onclick="hideSidebar()"> <a href=""> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg> </a> </li>
+                    <li > <a href="#">Home</a> </li>
+                    <li > <a href="#">History</a> </li>
+                    <li > <a href="#">More Info</a> </li>
+                </ul>
+            </nav>
+
+            <div id="title-div">
+                <h1 id="title">[TETRIS]</h1>
+                <p>A brief history of an icon.</p>
+            </div>
+            
+            <div id="img-div">
+                <img id="image" src="tetris.png" alt="the 1987/1988 Tetris start screen. The letters are crimson, bordered in gold; taking up . Below that are the creator, and other, credits.">
+                <div id="img-caption">The underground king of gaming.</div>
+            </div>
+            <section id="tribute-info">
+                <h2>A Run To Remember</h2>
+                <p>From humble beginnings to "required reading" for an entire culture. Here's a brief history of the game's journey.</p>
+                <ul id="info-list">
+                    <li>1985 - one day, a young Russian software engineer (Alexey Pajitnov) got bored and coded a game</li>
+                    <li>1987 - Tetris &trade; is born, sparking the worldwide phenomenon</li>
+                    <li>1988 - Legal battles regarding licencing begin</li>
+                    <li>1996 - The Tetris Company is founded, managing the brand and licencing of it to third parties.</li>
+                    <li>2023 - Tetris makes it's debut on the silver screen</li>
+                    <li>2023 - a teenage boy becomes the first person in history to reach the kill screen</li>
+                </ul>
+                <div id="quote">
+                    <q>
+                        You should sit in meditation for 20 minutes a day, unless you're too busy, then you should sit for an hour. If Tetris has taught me anything, it's that errors pile up & accomplishments disappear. Everybody has a plan until they get punched in the mouth.
+                    </q>
+                    <cite> -- Mike Tyson</cite>
+                </div>
+            </section>
+            <!-- target="_blank" opens a link in a new tab -->
+            <h3>For more information, make to visit the <a id="tribute-link" href="https://en.wikipedia.org/wiki/Tetris" target="_blank">Tetris Wikipedia page</a></h3>
+        </main>
+        <script>
+            function showSideBar(){
+                const sidebar = document.querySelector("#sidebar");
+                sidebar.style.display = "flex";
+            }
+
+            function hideSidebar(){
+                const sidebar = document.querySelector("#sidebar");
+                sidebar.style.display = "none";
+            }
+        </script>
+    </body>
+</html>
+
+<!-- User Stories:
+
+    1. Your tribute page should have a main element with a corresponding id of main, which contains all other elements
+    2. You should see an element with an id of title, which contains a string (i.e. text), that describes the subject of the tribute page (e.g. "Dr. Norman Borlaug")
+    3. You should see either a figure or a div element with an id of img-div
+    4. Within the #img-div element, you should see an img element with a corresponding id="image"
+    5. Within the #img-div element, you should see an element with a corresponding id="img-caption" that contains textual content describing the image shown in #img-div
+    6. You should see an element with a corresponding id="tribute-info", which contains textual content describing the subject of the tribute page
+    7. You should see an a element with a corresponding id="tribute-link", which links to an outside site, that contains additional information about the subject of the tribute page. HINT: You must give your element an attribute of target and set it to _blank in order for your link to open in a new tab
+    8. Your #image should use max-width and height properties to resize responsively, relative to the width of its parent element, without exceeding its original size
+    9. Your img element should be centered within its parent element -->

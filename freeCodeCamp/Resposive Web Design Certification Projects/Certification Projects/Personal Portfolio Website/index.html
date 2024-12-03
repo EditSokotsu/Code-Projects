@@ -1,0 +1,88 @@
+<!-- @AUTH: EditSokotsu
+@PROJ: freeCodeCamp | Personal Portfolio
+@COMM: this is a freeCodeCamp certification project. It implements a homepage for a personal portfolio site. The main content consists of past course projects. See the user stories below. --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- START NAV -->
+    <nav id="navbar">
+        <ul id="nav-links">
+            <li class="nav-link"><a  href="#">Home</a></li>
+            <li class="nav-link"><a  href="#projects">Work</a></li>
+            <li class="nav-link"><a  href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- END NAV -->
+    <!-- START WELCOME SECTION -->
+    <section id="welcome-section">
+        <h1 id="welcome-title">You can call me Edit</h1>
+        <p id="welcome-text">I'm a web developer who does web developer things.</p>
+    </section>
+    <!-- END WELCOME SECTION -->
+    <!-- START PROJECTS SECTION -->
+    <section id="work-section">
+        <h2>Here's some of what I do</h2>
+        <div id="projects">
+            <a class="project-tile" href="#">
+                <img src="Technical Document.png" alt="" class="project-img">
+                <p class="project-text">Technical Document</p>
+            </a>
+            <a class="project-tile" href="#">
+                <img src="Survey Form.png" alt="" class="project-img">
+                <p class="project-text">Survey Form</p>
+            </a>
+            <a class="project-tile" href="#">
+                <img src="Product Landing Page.png" alt="" class="project-img">
+                <p class="project-text">Landing Page</p>
+            </a>
+        </div>
+        
+    </section>
+    <!-- END PROJECTS SECTION -->
+    <!-- STARTS PROFILE SECTION -->
+    <section id="profile">
+        <h3 id="profile-title">Let's Work!</h3>
+        <p class="profile-text">Look at what I'm working on and reach me on these platforms</p>
+        <div id="profile-links">
+            <a class="profile-link" href="" target="_blank">
+                <i class="bi bi-envelope-at-fill"></i> Email
+            </a>
+            <a class="profile-link" href="" target="_blank">
+                <i class="bi bi-twitter"></i> Twitter
+            </a>
+            <a id="profile-link" class="profile-link" href="https://github.com/EditSokotsu" target="_blank">
+                <i class="bi bi-github"></i> Github
+            </a>
+        </div>
+        
+    </section>
+    <!-- END OF PROFILE SECTION -->
+    <!-- START OF FOOTER -->
+    <footer id="footer">
+            <p class="footer-text">**This is just a fake portfolio. All the projects and contact details given are not real.</p>
+            <p class="footer-text">Created by EditSokotsu</p>
+    </footer>
+    <!-- END OF FOOTER -->
+</body>
+</html> 
+
+<!-- User Stories:
+
+    1. Your portfolio should have a welcome section with an id of welcome-section
+    2. The welcome section should have an h1 element that contains text
+    3. Your portfolio should have a projects section with an id of projects
+    4. The projects section should contain at least one element with a class of project-tile to hold a project
+    5. The projects section should contain at least one link to a project
+    6. Your portfolio should have a navbar with an id of navbar
+    7. The navbar should contain at least one link that you can click on to navigate to different sections of the page
+    8. Your portfolio should have a link with an id of profile-link, which opens your GitHub or freeCodeCamp profile in a new tab
+    9. Your portfolio should have at least one media query
+    10. The height of the welcome section should be equal to the height of the viewport
+    11. The navbar should always be at the top of the viewport -->

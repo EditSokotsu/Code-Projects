@@ -1,0 +1,86 @@
+<!-- @AUTH: EditSokotsu
+@PROJ: freeCodeCamp | Survey Form
+@COMM: this is a freeCodeCamp certification project. The project implements a simple survey form with HTML and CSS. See the user stories below. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1 id="title">Survey</h1>
+    <p id="description">Thank you for taking the time to help us.</p>
+    <div class="container">
+        <!-- action attribute would normally be required to submit relevant form data somewhere. -->
+        <!-- <form id="form-id" action="some-url" method="post"></form> -->
+        <form id="survey-form">
+            <div id="div-1">
+                <label for="name" id="name-label">Name:
+                    <input type="text" id="name" placeholder="Enter your name" required >
+                </label>
+                <label for="email" id="email-label">Email:
+                    <input type="email" id="email" placeholder="example@domain.com" pattern="" required>
+                </label>
+                <label for="number" id="number-label">Age:
+                    <input type="number" id="number" min="13"
+                    max="125" placeholder="Age" pattern="" required>
+                </label>
+            </div>
+            
+            <div id="div-2">
+                <p>Do you like sugary foods?</p>
+                <input type="radio" name="prefer-sugar" value="yes"> Yes
+                <input type="radio" name="prefer-sugar" value="no"> No
+            </div>
+            
+            <div id="div-3">
+                <p>What, if any, sugary foods do you eat?</p>
+                <label><input type="checkbox" class="sugary-food-item" value="candy-chocolate"> Candy and Chocolate</label>
+                <label for=""><input type="checkbox" class="sugary-food-item" value="soft-drinks"> Soft Drinks</label>
+                <label for=""><input type="checkbox" class="sugary-food-item" value="fruit"> Fruits</label>
+                <label for=""><input type="checkbox" class="sugary-food-item" value="fruit-juices"> Fruit Juices</label>
+            </div>
+            
+            <div id="div-4">
+                <p>Generally, how much sugar do you think you eat?</p>
+                <select id="dropdown">
+                    <option value="">(select one)</option>
+                    <option value="1">none/barely any</option>
+                    <option value="2">a reasonable amount</option>
+                    <option value="3">enough to consider cutting back</option>
+                    <option value="4">i am sugar</option>
+                </select>
+            </div>
+            
+            <div id="div-5">
+                <p>Do you have any other commments concerning your sugar intake?</p>
+                <textarea name="" id="comments" cols="30" rows="10"></textarea>
+            </div>
+            
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
+<!-- User Stories:
+
+    1. You should have a page title in an h1 element with an id of title
+    2. You should have a short explanation in a p element with an id of description
+    3. You should have a form element with an id of survey-form
+    4. Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text
+    5. Inside the form element, you are required to enter your email in an input field that has an id of email
+    6. If you enter an email that is not formatted correctly, you will see an HTML5 validation error
+    7. Inside the form, you can enter a number in an input field that has an id of number
+    8. The number input should not accept non-numbers, either by preventing you from typing them or by showing an HTML5 validation error (depending on your browser).
+    9. If you enter numbers outside the range of the number input, which are defined by the min and max attributes, you will see an HTML5 validation error
+    10. For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label"
+    11. For the name, email, and number input fields, you can see placeholder text that gives a description or instructions for each field
+    12. Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from
+    13. Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the name attribute
+    14. Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute
+    15. Inside the form element, you are presented with a textarea for additional comments
+    16. Inside the form element, you are presented with a button with id of submit to submit all the inputs -->

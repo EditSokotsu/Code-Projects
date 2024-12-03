@@ -1,0 +1,146 @@
+WEB AUDIO API
+	- supported by all web browsers, lets you generate and process audio in web applications. 
+	- using Audio() generates a new HTML audio element
+		* const audio = new Audio()
+		
+SPREAD OPERATOR
+	- allows you to copy all elements from one array into another. It can also be used to concatenate multiple arrays into one. 
+		eg. 	const arr1 = [1, 2, 3];
+			const arr2 = [4, 5, 6];
+
+			const combinedArr = [...arr1, ...arr2];
+			console.log(combinedArr); // Output: [1, 2, 3, 4, 5, 6]
+	
+ARROW FUNCTION
+	- a type of shorthand for writing a function
+	- works like a regular function
+	- anonymous -> has not name
+		* assign a variable to an arrow function to name it.
+			eg. const printGreeting = () => {...}
+		* calling function works as usual
+			eg. printGreeting()
+	- can accept parameters, if it all has 1 parameter -> can omit ()
+	- if the arrow function is returning a simple expression, you can omit the return keyword and the curly braces {}. This is called an implicit return.
+		eg. const multiplyTwoNumbers = (num1, num2) => num1 * num2;
+
+MAP() METHOD
+	- used to iterate through an array and return a new array. It's helpful when you want to create a new array based on the values of an existing array.
+		eg. const numbers = [1, 2, 3];
+const doubledNumbers = numbers.map((number) => number * 2); // doubledNumbers will be [2, 4, 6]
+	- takes function as argument -> callback function (a function passed to another as an argument)
+	
+	
+JOIN() METHOD
+	- concatenates all elements of an array into a single string.
+	- it takes an optional parameter called a separator which is used to separate each element of the array
+		eg. const exampleArr = ["This", "is", "a", "sentence"];
+		    const sentence = exampleArr.join(" "); // Separator takes a space character
+		    console.log(sentence); // Output: "This is a sentence"
+
+OPTIONAL CHAINING (?)
+	- helps prevent errors when accessing nested properties that might be null or undefined.
+		eg. const user = {
+		  name: "Quincy",
+		  address: {
+		    city: "San Francisco",
+		    state: "CA",
+		    country: "USA",
+		  },
+		};
+
+		// Accessing nested properties without optional chaining
+		const state = user.address.state; // CA
+
+		// Accessing a non-existent nested property with optional chaining
+		const zipCode = user.address?.zipCode; // Returns undefined instead of throwing an error
+
+
+SORT() METHOD
+	- turns all elements of an array into strings and compares them
+	- accepts a callback function to define the sort behavior
+	- Strings are compared lexicographically which means they are compared character by character
+	- method is expecting a number to be returned. If you return a negative number, the first item is sorted before the second item.
+	
+		eg. const fruits = [
+			  { name: "Apples", price: 0.99 },
+			  { name: "Blueberries", price: 1.49 },
+			  { name: "Grapes", price: 2.99 },
+			];
+
+			fruits.sort((a, b) => {
+			  if (a.name < b.name) {
+			    return -1;
+			  }
+
+			  if (a.name > b.name) {
+			    return 1;
+			  }
+
+			  return 0;
+			});
+	- Another use case for the callback function is to randomize an array.
+		* One way to randomize an array of items would be to subtract 0.5 from Math.random() which produces random values that are either positive or negative. This makes the comparison result a mix of positive and negative values, leading to a random ordering of elements.
+		eg.	const names = ["Tom", "Jessica", "Quincy", "Naomi"];
+			names.sort(() => Math.random() - 0.5);
+
+
+FIND() METHOD
+	-  retrieves the first element within an array that fulfills the conditions specified in the provided callback function. If no element satisfies the condition, the method returns undefined.
+		eg. 	const numbers = [10, 20, 30, 40, 50];
+
+			// Find the first number greater than 25
+			const foundNumber = numbers.find((number) => number > 25);
+			console.log(foundNumber); // Output: 30
+			
+INDEXOF() METHOD
+	- array method, returns the first index at which a given element can be found in the array, or -1 if the element is not present.
+		eg. const animals = ["dog", "cat", "horse"];
+			animals.indexOf("cat") // 1
+			
+FOREACH() METHOD
+	- used to loop through an array and perform a function on each element of the array.
+	- For example, suppose you have an array of numbers and you want to log each number to the console.
+		eg.	const numbers = [1, 2, 3, 4, 5];
+
+			// Using forEach to iterate through the array
+			numbers.forEach((number) => {
+			  console.log(number); // 1, 2, 3, 4, 5
+			});
+			
+TEXTCONTENT
+	- textContent sets the text of a node and allows you to set or retrieve the text content of an HTML element.
+
+FILTER() METHOD
+	- keeps only the elements of an array that satisfy the callback function passed to it
+	 	eg.	const numArr = [1, 10, 8, 3, 4, 5]
+			const numsGreaterThanThree = numArr.filter((num) => num > 3);
+
+			console.log(numsGreaterThanThree) // Output: [10, 8, 4, 5]
+
+CREATEELEMENT()
+	- a DOM method you can use to dynamically create an element using JavaScript. To use createElement(), you call it, then pass in the tag name as a string
+		eg. 	// syntax
+			document.createElement(tagName)
+
+			// example
+			document.createElement('div')
+	- You can also assign it to a variable
+		eg.	const divElement = document.createElement('div')
+
+CREATETEXTNODE()
+	- a DOM method that  creates a text node.
+	- To use it, you call it and pass in the text as a string
+		eg.	document.createTextNode("your text")
+	- You can also assign it to a variable
+		eg.	const myText = document.createTextNode("your text")
+
+APPENDCHILD()
+	- lets you add a node or an element as the child of another element
+		eg.	const parentElement = document.createElement("button")
+			const parentElementText = document.createTextNode("Click me")
+
+			// attach the text "Click me" to the button
+			parentElement.appendChild(parentElementText)
+
+
+

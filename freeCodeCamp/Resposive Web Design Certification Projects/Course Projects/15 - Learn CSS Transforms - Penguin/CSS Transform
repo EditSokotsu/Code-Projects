@@ -1,0 +1,5 @@
+CSS Transform:
+
+SKEW transform function takes two arguments: the first being an angle to shear the x-axis by, and the second being an angle to shear the y-axis by.
+
+SCALE influences the size of a target element.

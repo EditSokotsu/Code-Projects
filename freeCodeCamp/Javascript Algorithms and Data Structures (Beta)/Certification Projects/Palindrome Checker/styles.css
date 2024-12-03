@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    background-color: #0a0a23;
+    text-align: center;
+}
+
+img{
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1{
+    font-size: 3rem;
+    margin-bottom: 25px ;
+}
+
+#palindrome-form{
+    border: 3px solid turquoise;
+    border-radius: 5px;
+    box-shadow: 5px 8px 10px turquoise;
+    margin: 20px auto;
+    background-color: whitesmoke;
+    width: 85%;
+}
+
+#palindrome-form label{
+    margin: 10px 0 20px;
+    color: black;
+    display: block;
+}
+
+#text-input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 50px;
+    border-bottom: 2px solid turquoise;
+    width: 55%;
+    height: 25%;
+    background-color: whitesmoke;
+    color: black;
+}
+
+#check-btn{
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #0a0a23;
+    font-size: 1.1rem;
+}
+
+#result{
+    margin-bottom: 10px ;
+    color: black;
+    font-size: 2rem;
+}
+
+#palindrome-explainer{
+    padding: 10px;
+    border: 2px solid 0a0a23;
+    margin: 35px auto;
+    background-color: rgb(34, 39, 34);
+    width: 55%;
+}
+
+.style-lightbulb{
+    text-shadow: 1px 1px 3px turquoise;
+}

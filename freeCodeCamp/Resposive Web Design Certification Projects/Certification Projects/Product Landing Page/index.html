@@ -1,0 +1,187 @@
+<!-- @AUTH: EditSokotsu
+@PROJ: freeCodeCamp | Product Landing Page
+@COMM: this is a freeCodeCamp certification project. It implements a landing page for product. See the user stories below for more information. -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Landing Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <nav id="nav-bar">
+                
+                <ul id="nav-links">
+                    <li>
+                        <a href="#" id="logo">
+                            <img src="seazon-logo.png" alt="">
+                        </a>
+                    </li>
+                    <li class="hideOnMobile">
+                        <a class="nav-link"  href="#features">Features</a>
+                    </li>
+                    <li class="hideOnMobile">
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                    </li>
+                    <li class="hideOnMobile">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li >
+                        <a id="responsive-menu" class="material-symbols-outlined" onclick="showSidebar()">
+                            menu
+                        </a>
+                    </li>
+                    
+                </ul>
+                <ul class="sidebar">
+                    <li> <a href="#" id="closeSidebarBtn" class="material-symbols-outlined" onclick="hideSidebar(); return false;">close</a>
+                    </li>
+                    <li >
+                        <a class="nav-link"  href="#features">Features</a>
+                    </li>
+                    <li >
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                    </li>
+                    <li >
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                </ul>
+            </nav>
+            <main id="main-content">
+                <h2 id="page-header">Designed & Manufactured Locally</h2>
+
+                <form action="https://www.freecodecamp.com/email-submit" method="post" id="form">
+                    <input type="email" id="email" name="email"  placeholder="Enter your email address">
+                    <input  type="submit" id="submit"  class="btn" value="Get Started">
+                </form>
+
+                <section id="features">
+                    <div class="feature">
+                        <span class="feature-icon material-symbols-outlined">
+                            grocery
+                        </span>
+                        <div class="feature-text-wrapper">
+                            <h3 class="feature-title">Premium Ingredients</h3>
+                            <p class="feature-text">Only the finest indregients are selected to craft our beverages</p>
+                        </div>
+                    </div>
+                    <div class="feature"> 
+                        <span class="feature-icon material-symbols-outlined">
+                            eco
+                        </span>
+                        <div class="feature-text-wrapper">
+                            <h3 class="feature-title">Eco-friendly</h3>
+                            <p class="feature-text">Sustainably produced, from source to store.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon material-symbols-outlined">
+                            local_shipping
+                        </span>
+                        <div class="feature-text-wrapper">
+                            <h3 class="feature-title">Fast Shipping</h3>
+                            <p class="feature-text">All shipments within the city limits arrive within 24hrs of ordering.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="how-it-works">
+                    <p class="how-it-works-text">We use the dropshipping model for your convience. For more information, check out the video below.
+                    </p>
+                    <iframe width="520" height="315" src="https://www.youtube.com/embed/MaTs6NNNP88" title="Dropshipping 101: A Comprehensive Beginners Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="video"></iframe>
+                </section>
+                
+                <section id="pricing">
+                    <div class="product">
+                        <h4 class="product-title">Standard</h4>
+                        <ul class="product-features">
+                            <li class="product-feature">
+                                Lorem ipsum
+                            </li>
+                            <li class="product-feature">
+                                Lorem ipsum
+                            </li>
+                            <li class="product-feature">
+                                Lorem ipsum
+                            </li>
+                        </ul>
+                        <p class="product-price">$25</p>
+                        <button class="btn">Select</button>
+                    </div>
+                    <div class="product">
+                        <h4 class="product-title">Cappuccino</h4>
+                        <ul class="product-features">
+                            <li class="product-feature">
+                                Lorem ipsum
+                            </li>
+                            <li class="product-feature">
+                                Lorem ipsum
+                            </li>
+                            <li class="product-feature">
+                                Lorem ipsum
+                            </li>
+                        </ul>
+                        <p class="product-price">$35</p>
+                        <button class="btn">Select</button>
+                    </div>
+                    <div class="product">
+                        <h4 class="product-title">Mocca</h4>
+                        <ul class="product-features">
+                            <li class="product-feature">
+                                Lorem ipsum
+                            </li>
+                            <li class="product-feature">
+                                Lorem ipsum
+                            </li>
+                            <li class="product-feature">
+                                Lorem ipsum
+                            </li>
+                        </ul>
+                        <p class="product-price">$50</p>
+                        <button class="btn">Select</button>
+                    </div>
+                </section>
+            </main> 
+            <footer>
+                <ul id="footer-links">
+                    <li class="footer-link"><a href="#">Privacy</a></li>
+                    <li class="footer-link"><a href="#">Terms</a></li>
+                    <li class="footer-link"><a href="#">Contact</a></li>
+                </ul>
+                <p>Seazon Company Inc, &copy; 2024</p>
+            </footer>
+        </div>  
+        <script>
+            function showSidebar(){
+                const sidebar = document.querySelector(".sidebar")
+                sidebar.style.display = "flex"
+            }
+
+            function hideSidebar(){
+                const sidebar = document.querySelector(".sidebar")
+                sidebar.style.display = "none"
+            }
+        </script>
+    </body>
+</html>
+
+<!-- User Stories:
+
+    1. Your product landing page should have a header element with a corresponding id="header"
+    2. You can see an image within the header element with a corresponding id="header-img" (A logo would make a good image here)
+    3. Within the #header element, you can see a nav element with a corresponding id="nav-bar"
+    4. You can see at least three clickable elements inside the nav element, each with the class nav-link
+    5. When you click a .nav-link button in the nav element, you are taken to the corresponding section of the landing page
+    6. You can watch an embedded product video with id="video"
+    7. Your landing page has a form element with a corresponding id="form"
+    8. Within the form, there is an input field with id="email" where you can enter an email address
+    9. The #email input field should have placeholder text to let users know what the field is for
+    10. The #email input field uses HTML5 validation to confirm that the entered text is an email address
+    11. Within the form, there is a submit input with a corresponding id="submit"
+    12. When you click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit)
+    13. The navbar should always be at the top of the viewport
+    14. Your product landing page should have at least one media query
+    15. Your product landing page should utilize CSS flexbox at least once -->

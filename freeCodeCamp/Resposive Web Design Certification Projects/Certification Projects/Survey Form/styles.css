@@ -1,0 +1,73 @@
+/* @TODO:  - media queries
+        - general quality-of-life styling */
+.container{
+    border: 5px solid black;
+    border-radius: 10px;
+    margin: 0 250px 50px;
+    font-size: 1.25rem;
+    background-color: lightgray;
+}
+
+form{
+    padding: 20px;
+}
+
+#title, #description{
+    text-align: center;
+}
+
+#name, #email, #number{
+    display: block;
+    width: 80%;
+    height: 25px;
+}
+
+label{
+    display: block;
+}
+
+#div-1, #div-2, #div-3, #div-4, #div-5{
+    padding-left: 15px;
+}
+
+#div-1 label{
+    padding-bottom: 10px;
+}
+
+#dropdown{
+    height: 35px;
+    width: 80%;
+    font-size: 1rem;
+}
+
+input[type="checkbox"]:hover, input[type="radio"]:hover{
+    box-shadow: 1px 2px 3px rgb(255, 128, 10);
+}
+
+textarea{
+    margin: 0 auto 10px;
+    display: block;
+    width: 95%
+}
+
+button{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 70px 10px;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 80%;
+}
+
+button:hover{
+    background-color: rgb(2, 2, 75);
+    box-shadow: 2px 2px 5px rgb(255, 128, 10);
+    color: white;
+}
+
+@media (max-width: 800px){
+    .container{
+        margin: 0 auto ;
+    }
+}

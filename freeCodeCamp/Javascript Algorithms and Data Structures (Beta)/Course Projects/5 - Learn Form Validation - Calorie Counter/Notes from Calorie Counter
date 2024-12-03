@@ -1,0 +1,50 @@
+NOTE: Values from an HTML input field are received as strings in JavaScript. You'll need to convert these strings into numbers before performing any operations on them.
+
+REGULAR EXPRESSION
+	- abrrev.-> regex
+	- A regular expression is a sequence of characters that forms a search pattern.
+	- Regex in JavaScript is indicated by a pattern wrapped in forward slashes.
+	eg. to match the string literal "hello" 
+		const regex = /hello/;
+	- "\" -> escape character, enables a programmer to use characters, such as "+", in the expression that would otherwise trigger different behaviors
+	eg. "+" has a special meaning in regex, to escape that a "\" can be used before it to search for positive values in an expression. Shorthand class are also preceded by "\"
+		const regex = /\+-/
+	- shorthand classes -> 
+		\s -> whitespaces
+		
+	- character classes -> denotes with []
+	
+	- modifiers flags -> changes the nature of how a regex is evaluated
+		i -> case insensitive
+		g -> global - keeps looking for instances after coming across them
+		
+	- .replace() -> a method that searches a string for given characters and returns a string with the characeters replaced. Accepts a regex as an argument
+		eg. str.replace(/[+-\s]/, "")
+		
+	- .match() ->
+	
+STRING LITERALS
+	- allow you to interpolate variables directly within a string.
+	- denoted by -> ``
+	- Variables can be passed in to a template literal by surrounding the variable with ${} – the value of the variable will be inserted into the string.
+	
+EVENT LISTENER
+	- sets a buttons behavior
+	- method accepts 2 args -> event to listen for, callback function that sets event behavior. The function can be a REFERENCE to an already existing one or an arrow function, etc
+		eg. someElement.addEventListener("click", () => {//some function here} )
+		
+INSERTADJACENTHTML()
+	- preserves input from elements that are dynamically inserted into page.
+	- takes two arguments -> 1) a string that specifies the position of the inserted element 2) a string containing the HTML to be inserted
+	eg. someSelectorVariable.insertAdjacentHTML("beforeend", someHTMLStringVariable)
+		* "beforend" inserts new element as last last child
+		
+FOR...OF LOOP
+	-  used to iterate over elements in an iterable object like an array or Nodelist. 
+	- the variable declared in the loop represents the current element being iterated over.
+	eg. for (const element of elementArray) {
+		  console.log(element);
+		}
+
+ARRAY.FROM()
+	- .from() method that accepts an array-like and returns an array 

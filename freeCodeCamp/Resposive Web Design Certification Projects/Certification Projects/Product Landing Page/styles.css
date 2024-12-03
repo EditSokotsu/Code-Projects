@@ -1,0 +1,269 @@
+/* @TODO: 
+    -media queries
+    -resize footer
+    -make product items responsive
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace, serif, sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+nav{
+    background-color: whitesmoke;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#logo img{
+    height: 50px;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav li a{
+    padding: 10px 30px;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+nav ul a:hover{
+    background-color: #f0f0f0;
+}
+
+#responsive-menu{
+    font-size: 2.5rem;
+    display: none;
+    cursor: pointer;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgb(226, 226, 226);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.sidebar li, .sidebar a{
+    width: 100%;
+}
+
+h2{
+    margin: 100px auto 50px auto;
+    text-align: center;
+    font-size: 4rem;
+    width: 70%;
+}
+
+#form{
+    margin: 0 auto 30px;
+    width: 70%;
+}
+
+#email{
+    border-radius: 5px;
+    margin: 0 auto 20px;
+    display: block;
+    height: 2rem;
+    width: 70%;
+}
+
+#submit{
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    padding: 4px 8px;
+    color: whitesmoke;
+    background-color: black;
+    width: 30%;
+}
+
+#submit:hover{
+    border: 2px solid goldenrod;
+    color: goldenrod;
+}
+
+#features{
+    margin: 100px auto;
+}
+
+.feature{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 80%;
+}
+
+span.feature-icon{
+    text-align: center;
+    font-size: 9rem;
+}
+
+.feature-title{
+    font-size: 3rem;
+}
+
+.feature-text{
+    font-size: 1.5rem;
+}
+
+#features{
+    margin-bottom: 100px;
+}
+
+p.how-it-works-text{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#video{
+    display: block;
+    margin: 30px auto 50px;
+}
+
+.product{
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 40%;
+}
+
+.product-title{
+    padding: 10px;
+    font-size: 2rem;
+    background-color: gray;
+    text-align: center;
+}
+
+.product-features{
+    padding: 10px;
+    list-style: none;
+    text-align: center;
+}
+
+.product-feature{
+    padding-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+.product-price{
+    font-size: 2.8rem;
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+
+.btn{
+    padding: 10px;
+    border: none;
+    width: 100%;
+    font-size: 1.3rem;
+    color: white;
+    background-color: black;
+}
+
+.btn:hover{
+    color: black;
+    background-color: goldenrod;
+}
+
+footer{
+    bottom: 0;
+    background-color: gray;
+}
+
+#footer-links{
+    padding-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+.footer-link a{
+    padding: 15px;
+    text-decoration: none;
+}
+
+footer p{
+    padding-left: 10px;
+}
+
+@media (max-width: 800px){
+    #responsive-menu{
+        display: block;
+    }
+
+    .hideOnMobile{
+        display: none;
+    }
+
+    span.feature-icon{
+        text-align: center;
+        font-size: 4.5rem;
+    }
+
+    .feature-title{
+        font-size: 2rem;
+    }
+    
+    .feature-text{
+        font-size: 1.1rem;
+    }
+
+    .product-title{
+        padding: 5px;
+        font-size: 1.5rem;
+    }
+    
+    .product-features{
+        padding: 10px;
+        list-style: none;
+        text-align: center;
+    }
+    
+    .product-feature{
+        padding-bottom: 8px;
+        font-size: 1.3rem;
+    }
+    
+    .product-price{
+        font-size: 2rem;
+    }
+}

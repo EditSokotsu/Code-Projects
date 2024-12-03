@@ -1,0 +1,37 @@
+ONCLICK
+	- a special property for button elements --> executes a behaviour when button is clicked
+	- access in JS script thru dot notation --> button.onclick = myFunction | myFunction is a reference, not a function call -> no "()" needed just function name.
+	
+JS OBJECT
+	- non primitive data type, mutable
+	- similar to array --> stores key-value pairs --> info accessed by property not index
+	- denoted by --> {} eg. const cat = {} //declares an empty object called "cat"
+	- if key is more than one word ==> use ""/'' --> ...{"Number of legs": 4,}
+	- access info via DOT (.) or BRACKET ([]) notation
+		- DOT NOTATION --> use when you know the name of the property you're trying to access 
+		--> object.property --> eg. const developer = { name: "Jessica", } \n console.log(developer.name) //developer.name prints Jessica to the console
+		- BRACKET NOTATION --> use when accessing a property with a space in it.
+		--> objectName["property Name"];
+		
+TERNARY OPERATOR
+	- conditional operator -> can be used as a one-line if/else statement
+	SYNTAX: condition ? expressionIfTrue : expressionIfFalse
+	eg. // if-else statement
+		if (score > 0) {
+		  return score
+		} else {
+		  return default_score
+		}
+
+		// ternary operator
+		return score > 0 ? score : default_score
+		
+.includes()
+	- an method that determines if an array contains an element and will return either true or false.
+	eg. const numbersArray = [1, 2, 3, 4, 5]
+	const number = 3
+
+	if (numbersArray.includes(number)) {
+	  console.log("The number is in the array.")
+	}
+
