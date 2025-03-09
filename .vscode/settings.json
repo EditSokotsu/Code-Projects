@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "vector": "cpp"
+    },
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": false,
+    "C_Cpp.errorSquiggles": "enabled",
+    "livePreview.defaultPreviewPath": "/clones and tuts/Navbars/responsive navbar/index_resp_navbar.html"
+}
